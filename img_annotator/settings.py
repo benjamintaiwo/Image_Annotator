@@ -25,10 +25,13 @@ SECRET_KEY = 'qlr5+)1z3xdh6&%csxk5svgiflhyqfnz4&crk=^d43el@bymrn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://image-annotator.herokuapp.com' ]
+ALLOWED_HOSTS = ['image-annotator.herokuapp.com' ]
 
 
 # Application definition
+# web: gunicorn img_annotator.wsgi
+# gunicorn==19.9.0
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',

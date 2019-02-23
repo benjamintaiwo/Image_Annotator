@@ -1,1 +1,1 @@
-web: gunicorn img_annotator.wsgi
+web: waitress-serve --port=$PORT {img_annotator}.wsgi:application
