@@ -29,8 +29,8 @@ ALLOWED_HOSTS = ['image-annotator.herokuapp.com' ]
 
 
 # Application definition
-# web: gunicorn img_annotator.wsgi
-# gunicorn==19.9.0
+
+
 
 
 INSTALLED_APPS = [
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 
 ROOT_URLCONF = 'img_annotator.urls'
 
@@ -129,6 +129,7 @@ STATICFILES_DIRS = (
 )
 
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage
 
 CORS_ORIGIN_ALLOW_ALL=True
 CORS_ORIGIN_WHITELIST = (
