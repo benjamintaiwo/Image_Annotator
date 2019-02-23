@@ -14,7 +14,7 @@
 
   $(document).ready(function(){
     $.ajax({
-      url: "api/annotate/?format=json",
+      url: "https://image-annotator.herokuapp.com/api/annotate/?format=json",
       type: 'GET',
       crossDomain: true,
       dataType: 'json',        
@@ -125,7 +125,7 @@
    data = (JSON.stringify(data));
 
    $.ajax({
-    url: "api/annotate/create/",
+    url: "https://image-annotator.herokuapp.com/api/annotate/create/",
     type: "POST",
      data:data,
     contentType: "application/json",
