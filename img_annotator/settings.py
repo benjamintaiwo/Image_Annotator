@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qlr5+)1z3xdh6&%csxk5svgiflhyqfnz4&crk=^d43el@bymrn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['image-annotator.herokuapp.com' ]
 
