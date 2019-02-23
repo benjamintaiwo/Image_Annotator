@@ -132,6 +132,7 @@ CORS_ORIGIN_WHITELIST = (
 
     'google.com',
     'hostname.example.com',
+    'image-annotator.herokuapp.com'
     'localhost:8000',
     '127.0.0.1:8000'
 )
