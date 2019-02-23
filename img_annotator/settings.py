@@ -25,7 +25,7 @@ SECRET_KEY = 'qlr5+)1z3xdh6&%csxk5svgiflhyqfnz4&crk=^d43el@bymrn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['image-annotator.herokuapp.com' ]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'annotator',
-    'rest_framework'
+    'rest_framework',
     
 ]
 
@@ -53,7 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
 
 ROOT_URLCONF = 'img_annotator.urls'
 
@@ -128,8 +129,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static_dev"),
 )
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage
+
 
 CORS_ORIGIN_ALLOW_ALL=True
 CORS_ORIGIN_WHITELIST = (
