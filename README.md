@@ -2,7 +2,10 @@
 
 
 ## About
-A simple application to demo an image annotator. [https://image-annotator.herokuapp.com/](https://image-annotator.herokuapp.com/)
+A simple application to demo an image annotator. [https://image-annotator.herokuapp.com/](https://image-annotator.herokuapp.com/) 
+  * For the admin route;
+       Username: Tbena   
+       Password: 0987654zxas 
 
 ## Goal
 The goal of this project is to create an app for annotating or drawing bounding boxes on an image.
